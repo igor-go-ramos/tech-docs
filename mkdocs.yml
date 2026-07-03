@@ -1,19 +1,22 @@
 site_name: Tech Documentation
+site_url: https://docs.shaottech.com.br
+site_author: Igor Ramos
 theme:
   name: material
+  language: pt-BR
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
+        name: Mudar para o tema escuro
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: indigo
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Mudar para o tema claro
   features:
     - navigation.instant
     - navigation.tracking
@@ -25,6 +28,12 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
 nav:
-  - Home: index.md
+  - Início: index.md
+  - Linux: linux.md
+  - Windows: windows.md
+  - Google Workspace: google-workspace.md
+  - Redes: redes.md
   - Troubleshooting: 
     - Fix Error 303: fix-error-303.md
+plugins:
+  - search
