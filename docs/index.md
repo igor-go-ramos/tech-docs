@@ -1,17 +1,11 @@
-# Field & Bench Tech Manual
+# Tech Docs
+Olá! Esta é a página central deste dossiê de informações técnicas.
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+---
 
-## Commands
+## Do que se trata este projeto
+Com foco em infraestutura e suporte técnico, este compilado visa registrar informações que eu considero valiosas. Logo, os tópicos serão variados e, conforme necessário, serão atualizados.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+---
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+> 💡 **Dica:** Use a barra de pesquisa no topo direito da página (ou aperte a tecla 'S') para fazer buscas rápidas.

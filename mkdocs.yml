@@ -29,11 +29,11 @@ markdown_extensions:
   - pymdownx.superfences
 nav:
   - Início: index.md
+  - UniFi: unifi.md
   - Linux: linux.md
   - Windows: windows.md
-  - Google Workspace: google-workspace.md
-  - Redes: redes.md
-  - Troubleshooting: 
+  - Active Directory: active-directory.md
+  - Troubleshooting:
     - Fix Error 303: fix-error-303.md
 plugins:
   - search
