@@ -27,12 +27,19 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.tabbed
 nav:
   - Início: index.md
   - UniFi: unifi.md
   - Linux: linux.md
   - Windows: windows.md
   - Active Directory: active-directory.md
+  - Microsoft 365: microsoft-365.md
   - Troubleshooting:
     - Fix Error 303: fix-error-303.md
 plugins:
