@@ -34,6 +34,9 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 nav:
   - Início: index.md
   - UniFi: unifi.md
@@ -43,8 +46,8 @@ nav:
   - Microsoft 365: microsoft-365.md
   - Google Workspace: google-workspace.md
   - NTFY: ntfy.md
-  - papercut: papercut.md
-  - wireguard: wireguard.md
+  - Papercut: papercut.md
+  - Wireguard: wireguard.md
   - Troubleshooting:
     - Fix Error 303: fix-error-303.md
 plugins:
