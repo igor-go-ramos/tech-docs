@@ -42,6 +42,9 @@ nav:
   - Active Directory: active-directory.md
   - Microsoft 365: microsoft-365.md
   - Google Workspace: google-workspace.md
+  - NTFY: ntfy.md
+  - papercut: papercut.md
+  - wireguard: wireguard.md
   - Troubleshooting:
     - Fix Error 303: fix-error-303.md
 plugins:
