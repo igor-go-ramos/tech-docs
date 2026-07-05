@@ -31,7 +31,7 @@ Agora o container do NTFY estará configurado para usar cache também, além de 
 
 Com isso, a instalação foi concluída.
 
-## Envio de mensagens
+## :fontawesome-solid-bell: Envio de mensagens
 Para enviar uma mensagem, você pode usar o utilitário `curl`, conforme o exemplo:
 
 ```bash

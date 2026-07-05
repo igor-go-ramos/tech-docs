@@ -12,7 +12,7 @@ Para setups em que o servidor do Papercut é compartilhado, precisamos ter faixa
 
 Outro aspecto importante que vale ressaltar é uma particularidade do Papercut que precisa ser considerada na hora de fazer a configuração de rede. O IP configurado inicialmente é mantido em todas as URLs geradas pelo servidor, então é necessário adicionar redirecionamentos apontando para o IP do Papercut na rede local de cada unidade. Por exemplo, se o Papercut foi instalado inicialmente em uma VPN configurada na faixa de IP `10.10.14.0/24`, com IP `10.11.12.2`, precisa haver uma regra NAT que troque o IP do Papercut para o IP configurado na VPN local (ex.: `10.11.11.2` -> `10.11.12.2`).
 
-## Instalação nas Impressoras (Epson)
+## :fontawesome-solid-print: Instalação nas Impressoras (Epson)
 !!!tip "Dica"
     Em caso de dúvida, é possível abrir a interface de uma impressora já configurada para conferir os detalhes e fazer comparações.
 

@@ -2,7 +2,7 @@ Este trata-se de um compilado de informações úteis sobre o ecossistema UniFi.
 
 ---
 ## Instalação
-### 📋 Pré-requisitos
+### :fontawesome-solid-clipboard-list: Pré-requisitos
 
 Antes de iniciar, certifique-se de ter as seguintes dependências instaladas:
 
@@ -10,9 +10,9 @@ Antes de iniciar, certifique-se de ter as seguintes dependências instaladas:
 sudo apt update; sudo apt install ca-certificates wget -y
 ```
 
-### 💻 Passo a Passo
+### :fontawesome-list-check: Passo a Passo
 
-=== "Script"
+=== ":fontawesome-solid-code: Script"
     Existem duas opções:
 
     Baixar uma versão específica ou a versão mais recente da controladora UniFi
@@ -35,7 +35,7 @@ sudo apt update; sudo apt install ca-certificates wget -y
 
     Uma vez que a instalação for concluída, verifique se a controladora está efetivamente funcionando, para isso, digite o endereço ip da máquina em questão e a porta (`8443`) em um navegador (p. e.: `https://10.0.0.5:8443` ou `https://localhost:8443` se você está instalando diretamente na mesma máquina). Se abrir, a instalação foi concluída com sucesso e você pode fazer o setup inicial ou restaurar um backup.
 
-=== "Docker"
+=== ":fontawesome-brands-docker: Docker"
 
     1. Crie um novo diretório em `/opt` chamado `unifi` e dentro deste diretório, crie o seguinte arquivo:
 
@@ -101,7 +101,7 @@ sudo apt update; sudo apt install ca-certificates wget -y
     5. Acesse o console via `https://ip_da_maquina:8443`
     6. [Opcional] Descomente as últimas linhas do arquivo `/opt/unifi/compose.yaml` para ativar o container que faz a atualização automática
 
-=== "Docker (servidores antigos)"
+=== ":fontawesome-brands-docker: Docker (servidores antigos)"
     
     1. Crie um novo diretório em `/opt` chamado `unifi` e dentro deste diretório, crie o seguinte arquivo:
 
