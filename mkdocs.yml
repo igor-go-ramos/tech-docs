@@ -49,6 +49,7 @@ nav:
   - Papercut: papercut.md
   - Wireguard: wireguard.md
   - Recursos: recursos.md
+  - Home Assistant: home-assistant.md
   - Troubleshooting:
     - Fix Error 303: fix-error-303.md
 plugins:
