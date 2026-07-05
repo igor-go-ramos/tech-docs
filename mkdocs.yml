@@ -48,6 +48,7 @@ nav:
   - NTFY: ntfy.md
   - Papercut: papercut.md
   - Wireguard: wireguard.md
+  - Recursos: recursos.md
   - Troubleshooting:
     - Fix Error 303: fix-error-303.md
 plugins:
