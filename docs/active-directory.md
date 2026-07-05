@@ -6,7 +6,7 @@ Uma vez que a questão das políticas e OUs já foram verificadas, podemos parti
 
 * **Ação:** Atualizar
 * **Local:** \\\ip-ou-url-do-compartilhamento\nome-do-compartilhamento
-* **Reconectar:** marcado
+* **Reconectar:** ✅
 * **Letra da unidade:** escolha uma letra ou deixe automático
 
 Na aba Comum, configure algumas flags adicionais:
