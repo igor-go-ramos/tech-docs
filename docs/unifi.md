@@ -116,7 +116,7 @@ sudo apt update; sudo apt install ca-certificates wget -y
           - PGID=1000
           - TZ=Etc/UTC
           - MONGO_USER=unifi
-          - MONGO_PASS=rdp4sswdsuPerSecur3
+          - MONGO_PASS=mongopass
           - MONGO_HOST=127.0.0.1
           - MONGO_PORT=27017
           - MONGO_DBNAME=unifi
@@ -131,10 +131,10 @@ sudo apt update; sudo apt install ca-certificates wget -y
         image: docker.io/mongo:4.4
         environment:
           MONGO_INITDB_ROOT_USERNAME: root
-          MONGO_INITDB_ROOT_PASSWORD: rdp4sswdsuPerSecur3
+          MONGO_INITDB_ROOT_PASSWORD: mongopass
           MONGO_DBNAME: unifi
           MONGO_USER: unifi
-          MONGO_PASS: rdp4sswdsuPerSecur3
+          MONGO_PASS: mongopass
         volumes:
           - ./data/db:/data/db
           - ./data/init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh:ro
@@ -171,7 +171,7 @@ Após a instalação, opcionalmente, você pode mudar o **inform host**, em raz�
 
 ---
 
-## Redefinição de APs
+## :material-access-point: Redefinição de APs
 Em alguns casos atípicos, em razão de algum problema ou configuração diferenciada, é necessário fazer a redefinição de APs via SSH. O comando utilizado é: `syswrapper.sh restore-default`.
 
 Também é comum que seja necessário alterar o IP da controladora dos APs via SSH. O comando é: `set-inform http://ip-of-controller:8080/inform`. Quando o AP se situa em outra rede, por exemplo, separado por uma VLAN, este comando pode ser usado para que ele consiga se comunicar com a controladora, contanto que haja conectividade entre os dois.
