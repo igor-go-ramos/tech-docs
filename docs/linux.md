@@ -129,8 +129,9 @@ Link útil: https://youtu.be/ykzR3i-pToY?si=CAdgDheA8SQuNLev
 
 No vídeo, a configuração é feita no formato de BIOS Legacy, porém esse procedimento pode ser adaptado para UEFI, simplesmente precisaríamos mudar o tipo de partição para EFI e aumentar o tamanho para 1 GB (+1G). Importante notar que não usaríamos o comando dpkg-reconfigure e sim, faríamos a cópia da partição /boot/efi para a mesma partição EFI do outro HD/SSD. Os passos detalhados para isso seriam:
 
-✅ Passos detalhados:
-1. Monte ambas as partições EFI:
+✅ Passos detalhados
+
+1 - Monte ambas as partições EFI:
 
 ```bash
 sudo mkdir -p /mnt/efi-sda
@@ -139,7 +140,7 @@ sudo mount /dev/sda1 /mnt/efi-sda
 sudo mount /dev/sdb1 /mnt/efi-sdb
 ```
 
-2. Copie o conteúdo da partição EFI principal para a secundária:
+2 - Copie o conteúdo da partição EFI principal para a secundária:
 
 ```bash
 sudo cp -r /mnt/efi-sda/* /mnt/efi-sdb/
@@ -147,14 +148,15 @@ sudo cp -r /mnt/efi-sda/* /mnt/efi-sdb/
 
 Isso copiará as pastas como EFI/debian, EFI/BOOT, etc., para que o segundo disco também tenha um ambiente de boot funcional.
 
-3. Instale o GRUB apontando para o segundo disco:
+3 - Instale o GRUB apontando para o segundo disco:
 Agora que /dev/sdb1 tem o conteúdo correto, diga ao GRUB para instalar o bootloader EFI nele:
 
 ```bash
 sudo grub-install --target=x86_64-efi --efi-directory=/mnt/efi-sdb --bootloader-id=debian --recheck --no-nvram /dev/sdb
 ```
 
-🔧 Importante: O `--no-nvram` evita sobrescrever a ordem de boot no firmware, e o `--bootloader-id` pode ser mantido como debian se quiser que o nome apareça igual na BIOS/UEFI.
+🔧 Importante: O `--no-nvram` evita sobrescrever a ordem de boot no firmware, e o `--bootloader-id` pode ser mantido como Debian se quiser que o nome apareça igual na BIOS/UEFI.
 
-4. Atualize o GRUB:
+4 - Atualize o GRUB
+
 Mesmo que os arquivos já estejam sincronizados, é bom garantir que tudo esteja em ordem: `sudo update-grub`
