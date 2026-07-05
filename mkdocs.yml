@@ -32,7 +32,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.details
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
 nav:
   - Início: index.md
   - UniFi: unifi.md
@@ -40,6 +41,7 @@ nav:
   - Windows: windows.md
   - Active Directory: active-directory.md
   - Microsoft 365: microsoft-365.md
+  - Google Workspace: google-workspace.md
   - Troubleshooting:
     - Fix Error 303: fix-error-303.md
 plugins:
