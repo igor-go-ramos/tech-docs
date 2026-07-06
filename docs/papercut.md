@@ -18,19 +18,31 @@ Outro aspecto importante que vale ressaltar é uma particularidade do Papercut q
 
 ### :fontawesome-solid-shoe-prints: Passo a Passo
 
-1. Acessar o site de registro da impressora e informar o número de série junto com as informações de região e o software utilizado (Papercut MF). Link: `https://openplatform.epson.biz/license-op/inputInformation.html`
+1. Acessar o site de registro da impressora e informar o número de série junto com as informações de região e o software utilizado (Papercut MF). Link: [Epson Open Platform](https://openplatform.epson.biz/license-op/inputInformation.html)
 
 2. Na impressora, entrar na seção "*Epson Open Platform*" e preencher o campo Chave do produto com a informação do site anterior e prosseguir.
 
 3. Após inserir a chave, ainda na mesma seção, abra a opção Sistema de Autenticação > Básico e insira dois links (lembre-se de trocar o "`papercut-mf-IP`" pelo IP do Papercut): 
 
-    * `https://<papercut-mf-IP>:11260/epson-ops-papercut` -> URL da página Web antes do Início de sessão
+    * URL da página web antes do início de sessão:
 
-    * `https://<papercut-mf-IP>:11260/epson-ops-papercut-notification-sfp-configure` -> URL de notificação
+      ```bash
+      https://<papercut-mf-IP>:11260/epson-ops-papercut
+      ```
+
+    * URL de notificação:
+
+      ```
+      https://<papercut-mf-IP>:11260/epson-ops-papercut-notification-sfp-configure
+      ```
 
 4. Ainda na mesma área, ative a Gestão de quota e por fim, dê *OK*.
 
-5. Acesse a URL: `https://<papercut-mf-IP>:11260/epson-ops-papercut`
+5. Acesse a URL:
+
+    ```bash
+    https://<papercut-mf-IP>:11260/epson-ops-papercut
+    ```
 
 6. Verifique na interface web do Papercut, na área de *Devices*, se o dispositivo já apareceu na listagem, caso não, ative a impressora manualmente navegando na interface física (tocar na tela dela força uma atualização). Se ainda assim não houver comunicação, verifique se não existe algum bloqueio de *firewall*.
 

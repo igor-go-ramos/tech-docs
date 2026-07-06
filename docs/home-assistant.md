@@ -80,7 +80,7 @@ A dashboard pode ser configurada em um equipamento com o Chromium instalado, nes
     ```
 
 ## :material-remote-desktop: Remote Access
-Existem diferentes formas de acessar a interface web do Home Assistant remotamente. Por exemplo, com o uso de uma VPN (Tailscale é uma boa opção). Porém, uma das formas mais simples - possuindo um domínio registrado - é utilizar um serviço da Cloudflare que permite criar um túnel de acesso de forma simples e rápida. O link da documentação oficial que mostra um passo a passo é: https://developers.cloudflare.com/learning-paths/replace-vpn/connect-private-network/cloudflared/
+Existem diferentes formas de acessar a interface web do Home Assistant remotamente. Por exemplo, com o uso de uma VPN (Tailscale é uma boa opção). Porém, uma das formas mais simples - possuindo um domínio registrado - é utilizar um serviço da Cloudflare que permite criar um túnel de acesso de forma simples e rápida. O link da documentação oficial que mostra um passo a passo é: [Cloudflared](https://developers.cloudflare.com/learning-paths/replace-vpn/connect-private-network/cloudflared/).
 Uma vez que o túnel foi criado, basta adicionar um container que receba as informações de conexão e o acesso já é liberado (incluindo um certificado TLS).
 
 Exemplo: arquivo `.yaml` (pode ser incluído em conjunto com o `compose.yaml` do Home Assistant)
