@@ -37,7 +37,7 @@ sudo apt update; sudo apt install ca-certificates wget -y
 
 === ":fontawesome-brands-docker: Docker"
 
-    Passo 1. Crie um novo diretório em `/opt` chamado `unifi` e dentro deste diretório, crie o seguinte arquivo:
+    **Passo 1 -** Crie um novo diretório em `/opt` chamado `unifi` e dentro deste diretório, crie o seguinte arquivo:
 
     ```yaml title="compose.yaml"
     services:
@@ -81,7 +81,7 @@ sudo apt update; sudo apt install ca-certificates wget -y
       #     - /var/run/docker.sock:/var/run/docker.sock
     ```
 
-    Passo 2. Ainda no mesmo diretório, crie mais um arquivo chamado `init-db.js`, e dentro dele adicione o seguinte conteúdo:
+    **Passo 2 -** Ainda no mesmo diretório, crie mais um arquivo chamado `init-db.js`, e dentro dele adicione o seguinte conteúdo:
 
     ```javascript title="init-db.js"
       db.getSiblingDB("unifi").createUser({
@@ -96,17 +96,17 @@ sudo apt update; sudo apt install ca-certificates wget -y
       });
     ```
 
-    Passo 3. Execute o comando: `docker compose up -d`
+    **Passo 3 -** Execute o comando: `docker compose up -d`
 
-    Passo 4. O console do Unifi deve demorar aproximadamente 1 minuto para iniciar.
+    **Passo 4 -** O console do Unifi deve demorar aproximadamente 1 minuto para iniciar.
 
-    Passo 5. Acesse o console via `https://ip_da_maquina:8443`
+    **Passo 5 -** Acesse o console via `https://ip_da_maquina:8443`
 
-    Passo 6. [Opcional] Descomente as últimas linhas do arquivo `/opt/unifi/compose.yaml` para ativar o container que faz a atualização automática
+    **Passo 6 -** [Opcional] Descomente as últimas linhas do arquivo `/opt/unifi/compose.yaml` para ativar o container que faz a atualização automática
 
 === ":fontawesome-brands-docker: Docker (servidores antigos)"
     
-    Passo 1. Crie um novo diretório em `/opt` chamado `unifi` e dentro deste diretório, crie o seguinte arquivo:
+    **Passo 1 -** Crie um novo diretório em `/opt` chamado `unifi` e dentro deste diretório, crie o seguinte arquivo:
 
     ```yaml title="compose.yaml"
     services:
@@ -145,7 +145,7 @@ sudo apt update; sudo apt install ca-certificates wget -y
         restart: unless-stopped
     ```
 
-    Passo 2. Dentro deste novo diretório `unifi`, crie outro chamado `data` e dentro dele adicione um arquivo chamado `init-mongo.sh`:
+    **Passo 2 -** Dentro deste novo diretório `unifi`, crie outro chamado `data` e dentro dele adicione um arquivo chamado `init-mongo.sh`:
 
     ```bash title="/opt/unifi/data/init-mongo.sh"
     #!/bin/bash
@@ -165,11 +165,11 @@ sudo apt update; sudo apt install ca-certificates wget -y
     EOF
     ```
 
-    Passo 3. Execute o comando: `docker compose up -d` (os logs da execução podem ser acessados com `docker compose logs`)
+    **Passo 3 -** Execute o comando: `docker compose up -d` (os logs da execução podem ser acessados com `docker compose logs`)
     
-    Passo 4. A interface web da controladora Unifi deve demorar aproximadamente 1 minuto para iniciar.
+    **Passo 4 -** A interface web da controladora Unifi deve demorar aproximadamente 1 minuto para iniciar.
     
-    Passo 5. Acesse o console via `https://ip_da_maquina:8443`
+    **Passo 5 -** Acesse o console via `https://ip_da_maquina:8443`
 
 ### Pós instalação
 Após a instalação, opcionalmente, você pode mudar o **inform host**, em razão da aplicação estar sendo executada dentro de um container e o endereçamento IP ser diferente do convencional, os dispositivos Unifi podem não conseguir se comunicar com a controladora. Portanto, nesta configuração, basta ir em Settings > System > Advanced e marcar override na opção de inform host, depois, adicionar o IP da máquina hospedeira e aplicar as alterações.

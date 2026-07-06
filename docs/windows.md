@@ -1,4 +1,4 @@
-# Windows
+# :material-microsoft-windows: Windows
 ## :material-folder-arrow-up-down: Compartilhamento de arquivos
 Em alguns momentos, o compartilhamento de arquivos pode parar de funcionar sem motivo aparente. Alguns comandos que podem ajudar são:
 

@@ -1,25 +1,25 @@
 ## :fontawesome-solid-download: Instalação
 A instalação pode ser encontrada no site oficial, mas resumidamente, é comum encontrá-lo nas principais distribuições Linux, nos repositórios oficiais. Por exemplo:
 
-=== "Debian"
+=== ":material-debian: Debian"
 
     ```bash
     apt install wireguard
     ```
 
-=== "Fedora"
+=== ":material-fedora: Fedora"
 
     ```bash
     dnf install wireguard-tools
     ```
 
-=== "Arch Linux"
+=== ":material-arch: Arch Linux"
 
     ```bash
     pacman -S wireguard-tools
     ```
 
-=== "Windows"
+=== ":material-microsoft-windows: Windows"
 
     Acesse o site oficial.
 

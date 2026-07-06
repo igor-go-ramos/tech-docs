@@ -1,3 +1,4 @@
+# :fontawesome-brands-linux: Linux
 ## :fontawesome-solid-hard-drive: BTRFS
 Alguns comandos úteis para verificar a integridade do sistema de arquivos BTRFS são:
 
@@ -25,7 +26,7 @@ journalctl --output=cat --grep='BTRFS.* i/o error' | sort | uniq | less
 !!!note "Nota"
     As informações obtidas dependem da execução do scrub, é através dessa operação que o sistema de arquivos é analisado.
 
-## VLANS
+## :fontawesome-solid-tags: VLANs
 Para fazer o teste de VLANs no Linux, com o NetworkManager, existem alguns comandos úteis:
 
 ```bash
@@ -48,7 +49,7 @@ Vale destacar que geralmente também é possível fazer isso pela interface grá
 
 Outro ponto de atenção na hora dos testes é que a VLAN é uma interface virtual e é adicionada em cima da interface física, logo, se existe uma outra conexão ativa, a interface física possuirá dois IPs atrelados a ela. Isso pode ser alterado se a outra conexão for desativada.
 
-## Fixação de IPs - Debian
+## :material-ip-network: Fixação de IPs - Debian
 Existem diferentes formas de fixar o endereço de IP no Debian. Uma delas se dá utilizando o systemd-networkd:
 
 Crie o arquivo de configuração e adicione o seguinte conteúdo:
@@ -112,8 +113,7 @@ Alguns arquivos no formato PDF podem ser extremamente pesados, o que dificulta o
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile=arquivo-comprimido.pdf arquivo-original.pdf
 ```
 
-## Particionamento (RAID)
-Particionamento (RAID)
+## :fontawesome-solid-copy: Particionamento (RAID)
 
 O Particionamento via RAID é interessante para aumentar a confiabilidade do sistema em caso de falha nos dispositivos de armazenamento. Existem diferentes formas de configurar o RAID, a mais simples é via md.
 
@@ -129,9 +129,9 @@ Link útil: https://youtu.be/ykzR3i-pToY?si=CAdgDheA8SQuNLev
 
 No vídeo, a configuração é feita no formato de BIOS Legacy, porém esse procedimento pode ser adaptado para UEFI, simplesmente precisaríamos mudar o tipo de partição para EFI e aumentar o tamanho para 1 GB (+1G). Importante notar que não usaríamos o comando dpkg-reconfigure e sim, faríamos a cópia da partição /boot/efi para a mesma partição EFI do outro HD/SSD. Os passos detalhados para isso seriam:
 
-✅ Passos detalhados
+### :material-check-circle: Passos detalhados
 
-1 - Monte ambas as partições EFI:
+**1 -** Monte ambas as partições EFI:
 
 ```bash
 sudo mkdir -p /mnt/efi-sda
@@ -140,7 +140,7 @@ sudo mount /dev/sda1 /mnt/efi-sda
 sudo mount /dev/sdb1 /mnt/efi-sdb
 ```
 
-2 - Copie o conteúdo da partição EFI principal para a secundária:
+**2 -** Copie o conteúdo da partição EFI principal para a secundária:
 
 ```bash
 sudo cp -r /mnt/efi-sda/* /mnt/efi-sdb/
@@ -148,15 +148,16 @@ sudo cp -r /mnt/efi-sda/* /mnt/efi-sdb/
 
 Isso copiará as pastas como EFI/debian, EFI/BOOT, etc., para que o segundo disco também tenha um ambiente de boot funcional.
 
-3 - Instale o GRUB apontando para o segundo disco:
+**3 -** Instale o GRUB apontando para o segundo disco:
 Agora que /dev/sdb1 tem o conteúdo correto, diga ao GRUB para instalar o bootloader EFI nele:
 
 ```bash
 sudo grub-install --target=x86_64-efi --efi-directory=/mnt/efi-sdb --bootloader-id=debian --recheck --no-nvram /dev/sdb
 ```
 
-🔧 Importante: O `--no-nvram` evita sobrescrever a ordem de boot no firmware, e o `--bootloader-id` pode ser mantido como Debian se quiser que o nome apareça igual na BIOS/UEFI.
+!!!warning "Importante"
+    O `--no-nvram` evita sobrescrever a ordem de boot no firmware, e o `--bootloader-id` pode ser mantido como Debian se quiser que o nome apareça igual na BIOS/UEFI.
 
-4 - Atualize o GRUB
+**4 -** Atualize o GRUB
 
 Mesmo que os arquivos já estejam sincronizados, é bom garantir que tudo esteja em ordem: `sudo update-grub`
