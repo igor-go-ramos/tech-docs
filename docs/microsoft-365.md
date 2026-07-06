@@ -1,2 +1,2 @@
-## Teams
+## :material-microsoft-teams: Teams
 Em caso de problemas ao criar reuniões no Microsoft Teams, uma boa linha de verificação é olhar diretamente nas políticas, que podem ser acessadas em: https://admin.teams.microsoft.com/policies/meetings

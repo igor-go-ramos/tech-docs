@@ -1,4 +1,4 @@
-## Instalação
+## :fontawesome-solid-download: Instalação
 Primeiro precisamos iniciar o container:
 
 ```bash
@@ -48,7 +48,8 @@ curl -d "Hello" ntfy.sh/topic
 
 Deste modo, quem estiver inscrito no tópico "topic" irá receber a notificação, sem a necessidade de qualquer tipo de instalação de container. Porém é importante escolher o nome com sabedoria, pois é um serviço aberto.
 
-## Exemplo Prático: Envio de Log de Backup (RClone)
+## :material-cloud-upload-outline: Exemplo Prático: Envio de Log de Backup (RClone)
+
 ```bash
 #! /bin/bash
 

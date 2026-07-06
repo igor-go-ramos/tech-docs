@@ -1,4 +1,4 @@
-## BTRFS
+## :fontawesome-solid-hard-drive: BTRFS
 Alguns comandos úteis para verificar a integridade do sistema de arquivos BTRFS são:
 
 Verificação em busca erros (/dev/sda pode ser substituído pelo volume):
@@ -95,7 +95,7 @@ Por fim, certifique-se de que o serviço está habilitado:
 systemctl enable systemd-networkd
 ```
 
-## PDFs
+## :fontawesome-solid-file-pdf: PDFs
 ### Como juntar dois ou mais arquivos em PDF?
 O utilitário **pdfunite** pode ser usado para a junção de arquivos em PDF. Geralmente ele já vem instalado no Linux.
 

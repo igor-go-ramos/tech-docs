@@ -1,4 +1,4 @@
-## Apps Script
+## :material-code-braces: Apps Script
 A ferramenta Apps Script do Google pode ser usada para automatizar muitas tarefas cotidianas.
 
 Alguns exemplos de uso:
@@ -11,6 +11,7 @@ Alguns exemplos de uso:
     Para alguns projetos, dependendo do objetivo, podemos usar serviços do Google para obter recursos mais avançados.
 
 ???tip "Exemplo prático: busca de todos os e-mails de um domínio"
+    
     ```javascript
     // Neste exemplo, AdminDirectory é um serviço provido pela Admin SDK API do Google
     const domains = [

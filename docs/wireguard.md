@@ -1,4 +1,4 @@
-## Instalação
+## :fontawesome-solid-download: Instalação
 A instalação pode ser encontrada no site oficial, mas resumidamente, é comum encontrá-lo nas principais distribuições Linux, nos repositórios oficiais. Por exemplo:
 
 === "Debian"
