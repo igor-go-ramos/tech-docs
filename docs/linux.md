@@ -27,6 +27,8 @@ journalctl --output=cat --grep='BTRFS.* i/o error' | sort | uniq | less
     As informações obtidas dependem da execução do scrub, é através dessa operação que o sistema de arquivos é analisado.
 
 ## :fontawesome-solid-tags: VLANs
+Para mais detalhes sobre VLANs, você pode conferir a página de [Redes](redes.md#VLANs).
+
 Para fazer o teste de VLANs no Linux, com o NetworkManager, existem alguns comandos úteis:
 
 ```bash
