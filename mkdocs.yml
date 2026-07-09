@@ -40,8 +40,10 @@ markdown_extensions:
 nav:
   - Início: index.md
   - UniFi: unifi.md
-  - Linux: linux.md
-  - Windows: windows.md
+  - Sistemas Operacionais:
+    - Linux: linux.md
+    - Arch Linux: archlinux.md
+    - Windows: windows.md
   - Active Directory: active-directory.md
   - Microsoft 365: microsoft-365.md
   - Google Workspace: google-workspace.md
