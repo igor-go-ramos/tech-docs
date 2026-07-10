@@ -1,5 +1,69 @@
 # :fontawesome-brands-linux: Linux
 ## :fontawesome-solid-hard-drive: BTRFS
+O BTRFS é um sistema de arquivos poderoso que possui diversas funções interessantes para armazenamento de dados. Em servidores de arquivos, queremos pelo menos ter duas unidades de armazenamento sendo usadas para guardar nossas informações, com o objetivo de ter maior redundância em caso de falha.
+
+### :material-set-split: Formatação e RAID
+
+Para formatar um disco em BTRFS, podemos executar o comando:
+
+```bash
+mkfs.btrfs  --compress zstd:3 -L pool /dev/sda
+```
+
+Lembrando de trocar, caso necessário,  o dispositivo /dev/sda pelo  que será formatado
+
+Depois, criamos uma pool no dispositivo
+
+```bash
+mkfs.btrfs -L pool /dev/sda
+```
+
+Após esses passo, montamos o disco em algum local, por exemplo:
+
+```bash
+mount /dev/sda -o compress=zstd:3 /mnt
+```
+Em seguida, criamos um novo subvolume que funciona como uma partição:
+
+```bash
+cd /mnt
+btrfs subv create ./data
+```
+
+Para que esse volume seja montado automaticamente, precisamos adicioná-lo ao arquivo fstab, e também criar a pasta que vai comportá-lo:
+
+```bash title="/etc/fstab"
+LABEL=pool      /data   btrfs   defaults,compress=zstd:3,subvol=data    0       0
+```
+
+```bash
+mkdir /data
+systemctl daemon-reload
+mount -a
+```
+
+Agora, quando o sistema for reiniciado, automaticamente montará o subvolume recém-criado "`data`".
+
+Uma vez que temos as configurações do BTRFS completas, podemos adicionar um novo dispositivo de armazenamento, a fim de aumentar a segurança dos dados: 
+
+```bash
+btrfs device add /dev/sdb /data
+```
+
+`/dev/sdb`, se houver necessidade, pode ser trocado pelo dispositivo a ser usado.
+
+E então, iniciamos o processo de construção do RAID 1 com a nova unidade de armazenamento:
+
+```bash
+btrfs balance start -dconvert=raid1,soft -mconvert=raid1,soft --bg /data
+```
+O comando será executado em background, mas você pode acompanhar o andamento digitando:
+
+```bash
+watch -n1 btrfs -v balance status /data
+```
+
+### :material-file-search: Verificação (Scrub)
 Alguns comandos úteis para verificar a integridade do sistema de arquivos BTRFS são:
 
 Verificação em busca erros (/dev/sda pode ser substituído pelo volume):
@@ -133,33 +197,33 @@ No vídeo, a configuração é feita no formato de BIOS Legacy, porém esse proc
 
 ### :material-check-circle: Passos detalhados
 
-**1 -** Monte ambas as partições EFI:
+1. Monte ambas as partições EFI:
 
-```bash
-sudo mkdir -p /mnt/efi-sda
-sudo mkdir -p /mnt/efi-sdb
-sudo mount /dev/sda1 /mnt/efi-sda
-sudo mount /dev/sdb1 /mnt/efi-sdb
-```
+    ```bash
+    sudo mkdir -p /mnt/efi-sda
+    sudo mkdir -p /mnt/efi-sdb
+    sudo mount /dev/sda1 /mnt/efi-sda
+    sudo mount /dev/sdb1 /mnt/efi-sdb
+    ```
 
-**2 -** Copie o conteúdo da partição EFI principal para a secundária:
+2. Copie o conteúdo da partição EFI principal para a secundária:
 
-```bash
-sudo cp -r /mnt/efi-sda/* /mnt/efi-sdb/
-```
+    ```bash
+    sudo cp -r /mnt/efi-sda/* /mnt/efi-sdb/
+    ```
 
-Isso copiará as pastas como EFI/debian, EFI/BOOT, etc., para que o segundo disco também tenha um ambiente de boot funcional.
+    Isso copiará as pastas como EFI/debian, EFI/BOOT, etc., para que o segundo disco também tenha um ambiente de boot funcional.
 
-**3 -** Instale o GRUB apontando para o segundo disco:
+3. Instale o GRUB apontando para o segundo disco:
 Agora que /dev/sdb1 tem o conteúdo correto, diga ao GRUB para instalar o bootloader EFI nele:
 
-```bash
-sudo grub-install --target=x86_64-efi --efi-directory=/mnt/efi-sdb --bootloader-id=debian --recheck --no-nvram /dev/sdb
-```
+    ```bash
+    sudo grub-install --target=x86_64-efi --efi-directory=/mnt/efi-sdb --bootloader-id=debian --recheck --no-nvram /dev/sdb
+    ```
 
-!!!warning "Importante"
-    O `--no-nvram` evita sobrescrever a ordem de boot no firmware, e o `--bootloader-id` pode ser mantido como Debian se quiser que o nome apareça igual na BIOS/UEFI.
+    !!!warning "Importante"
+        O `--no-nvram` evita sobrescrever a ordem de boot no firmware, e o `--bootloader-id` pode ser mantido como Debian se quiser que o nome apareça igual na BIOS/UEFI.
 
-**4 -** Atualize o GRUB
+4. Atualize o GRUB
 
-Mesmo que os arquivos já estejam sincronizados, é bom garantir que tudo esteja em ordem: `sudo update-grub`
+    Mesmo que os arquivos já estejam sincronizados, é bom garantir que tudo esteja em ordem: `sudo update-grub`
