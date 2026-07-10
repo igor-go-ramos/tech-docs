@@ -18,8 +18,9 @@
 * [Instalação do Debian (com RAID)](https://youtu.be/ykzR3i-pToY?si=CDfnqpJHMjH8710p)
 * [Conexão de rede privada (Cloudflare)](https://developers.cloudflare.com/learning-paths/replace-vpn/connect-private-network/cloudflared/)
 * [MkDocs Icons](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/)
+* [Samba AD DC no Ubuntu](https://youtu.be/KT6O-TfJ41g?si=R7DPS4_01D_pCXVs)
 
-## Scripts
+## :fontawesome-solid-code: Scripts
 
 ???tip "Extração de Áudio"
     ```bash
@@ -136,16 +137,26 @@
         echo "  Input : $rel"
         echo "  Output: $output"
 
-        ffmpeg \
-            -hide_banner \
-            -loglevel error \
-            ${FORCE:+-y} \
+
+
+        ffmpeg_args=(
+            -hide_banner
+            -loglevel error
+        )
+
+        if $FORCE; then
+          ffmpeg_args+=(-y)
+        else
+            ffmpeg_args+=(-n)
+        fi
+
+        ffmpeg "${ffmpeg_args[@]}" \
             -i "$input" \
             -vn \
             -map 0:a:0 \
             -c:a copy \
             -map_metadata 0 \
-            "$output"
+            "$output" 
     }
 
     if $RECURSIVE; then
