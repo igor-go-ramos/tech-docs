@@ -51,7 +51,7 @@ samba-tool domain passwordsettings show
 ```bash
 samba-tool domain passwordsettings set --max-pwd-age=0
 ```
-
+---
 ## :material-folder-arrow-up-down: Compartilhamento de Arquivos
 As permissões devem ser configuradas de modo que os usuários do domínio consigam acessar os arquivos.
 

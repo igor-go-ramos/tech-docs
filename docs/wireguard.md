@@ -22,7 +22,7 @@ A instalação pode ser encontrada no site oficial, mas resumidamente, é comum 
 === ":material-microsoft-windows: Windows"
 
     Acesse o site oficial.
-
+---
 ## :material-key-chain-variant: Geração de Chaves
 O par de chaves privada/pública deve ser gerado para cada *peer* que for ser conectado; posteriormente, essas chaves serão usadas no arquivo de configuração do WireGuard. Por exemplo:
 
@@ -31,7 +31,7 @@ wg genkey | tee privatekey | wg pubkey > publickey
 ```
 
 O comando anterior gera dois arquivos: "privatekey" e "publickey", sendo que a chave pública usa o resultado do comando de geração da chave privada (que é a própria chave privada) para ser produzida.
-
+---
 ## :material-cog: Exemplo de Configuração
 Dentro de `/etc/wireguard` é possível criar um arquivo de configuração para estabelecer a conexão entre dispositivos (peers):
 

@@ -11,7 +11,7 @@
 * Ventoy
 * VDO.Ninja
 * OBS Studio
-
+---
 ## :fontawesome-solid-link: Links Úteis
 * [Configuração de SMTP](https://docs.google.com/document/d/16m1ZEhAKygJpjgrJknBPUb9b3rjLxdhhCHZHBljYynk/edit?usp=sharing)
 * [Unattended install generator (Windows)](https://schneegans.de/windows/unattend-generator/)
@@ -19,7 +19,7 @@
 * [Conexão de rede privada (Cloudflare)](https://developers.cloudflare.com/learning-paths/replace-vpn/connect-private-network/cloudflared/)
 * [MkDocs Icons](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/)
 * [Samba AD DC no Ubuntu](https://youtu.be/KT6O-TfJ41g?si=R7DPS4_01D_pCXVs)
-
+---
 ## :fontawesome-solid-code: Scripts
 
 ???tip "Extração de Áudio"

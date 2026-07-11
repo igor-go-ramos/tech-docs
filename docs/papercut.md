@@ -6,12 +6,12 @@ A instalação varia de acordo com o tipo de integração, por exemplo, é poss�
 Após a instalação, você pode confirmar se a impressora foi configurada corretamente se ela estiver aparecendo na listagem de dispositivos.
 
 Para Chromebooks, baixe e abra a extensão **Mobility Print** e faça login para liberar a opção de imprimir.
-
+---
 ## :material-network: Setup de Rede
 Para setups em que o servidor do Papercut é compartilhado, precisamos ter faixas de rede distintas para que a conexão entre as unidades não conflite. Isso se aplica tanto para os clientes como para as impressoras, pois ambos precisam conversar com o software de impressão.
 
 Outro aspecto importante que vale ressaltar é uma particularidade do Papercut que precisa ser considerada na hora de fazer a configuração de rede. O IP configurado inicialmente é mantido em todas as URLs geradas pelo servidor, então é necessário adicionar redirecionamentos apontando para o IP do Papercut na rede local de cada unidade. Por exemplo, se o Papercut foi instalado inicialmente em uma VPN configurada na faixa de IP `10.10.14.0/24`, com IP `10.11.12.2`, precisa haver uma regra NAT que troque o IP do Papercut para o IP configurado na VPN local (ex.: `10.11.11.2` -> `10.11.12.2`).
-
+---
 ## :fontawesome-solid-print: Instalação nas Impressoras (Epson)
 !!!tip "Dica"
     Em caso de dúvida, é possível abrir a interface de uma impressora já configurada para conferir os detalhes e fazer comparações.

@@ -1,5 +1,4 @@
 # :material-google: Google Workspace
-
 ## :material-code-braces: Apps Script
 A ferramenta Apps Script do Google pode ser usada para automatizar muitas tarefas cotidianas.
 

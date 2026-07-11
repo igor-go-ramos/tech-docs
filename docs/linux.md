@@ -89,7 +89,7 @@ journalctl --output=cat --grep='BTRFS.* i/o error' | sort | uniq | less
 
 !!!note "Nota"
     As informações obtidas dependem da execução do scrub, é através dessa operação que o sistema de arquivos é analisado.
-
+---
 ## :fontawesome-solid-tags: VLANs
 Para mais detalhes sobre VLANs, você pode conferir a página de [Redes](redes.md#VLANs).
 
@@ -114,7 +114,7 @@ nmcli connection delete vlan20-test
 Vale destacar que geralmente também é possível fazer isso pela interface gráfica do sistema.
 
 Outro ponto de atenção na hora dos testes é que a VLAN é uma interface virtual e é adicionada em cima da interface física, logo, se existe uma outra conexão ativa, a interface física possuirá dois IPs atrelados a ela. Isso pode ser alterado se a outra conexão for desativada.
-
+---
 ## :material-ip-network: Fixação de IPs - Debian
 Existem diferentes formas de fixar o endereço de IP no Debian. Uma delas se dá utilizando o systemd-networkd:
 
@@ -161,7 +161,7 @@ Por fim, certifique-se de que o serviço está habilitado:
 ```bash
 systemctl enable systemd-networkd
 ```
-
+---
 ## :fontawesome-solid-file-pdf: PDFs
 ### Como juntar dois ou mais arquivos em PDF?
 O utilitário **pdfunite** pode ser usado para a junção de arquivos em PDF. Geralmente ele já vem instalado no Linux.
@@ -178,7 +178,7 @@ Alguns arquivos no formato PDF podem ser extremamente pesados, o que dificulta o
 ```bash
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile=arquivo-comprimido.pdf arquivo-original.pdf
 ```
-
+---
 ## :fontawesome-solid-copy: Particionamento (RAID)
 
 O Particionamento via RAID é interessante para aumentar a confiabilidade do sistema em caso de falha nos dispositivos de armazenamento. Existem diferentes formas de configurar o RAID, a mais simples é via md.

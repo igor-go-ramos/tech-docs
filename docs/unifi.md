@@ -170,10 +170,9 @@ sudo apt update; sudo apt install ca-certificates wget -y
     **Passo 4 -** A interface web da controladora Unifi deve demorar aproximadamente 1 minuto para iniciar.
     
     **Passo 5 -** Acesse o console via `https://ip_da_maquina:8443`
-
+---
 ### Pós instalação
 Após a instalação, opcionalmente, você pode mudar o **inform host**, em razão da aplicação estar sendo executada dentro de um container e o endereçamento IP ser diferente do convencional, os dispositivos Unifi podem não conseguir se comunicar com a controladora. Portanto, nesta configuração, basta ir em Settings > System > Advanced e marcar override na opção de inform host, depois, adicionar o IP da máquina hospedeira e aplicar as alterações.
-
 ---
 
 ## :material-access-point: Redefinição de APs

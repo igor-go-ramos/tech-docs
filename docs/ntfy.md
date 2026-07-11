@@ -30,7 +30,7 @@ docker run -v /var/cache/ntfy:/var/cache/ntfy -v /etc/ntfy:/etc/ntfy -p 7000:80 
 Agora o container do NTFY estará configurado para usar cache também, além de montar um volume na máquina hospedeira.
 
 Com isso, a instalação foi concluída.
-
+---
 ## :fontawesome-solid-bell: Envio de mensagens
 Para enviar uma mensagem, você pode usar o utilitário `curl`, conforme o exemplo:
 
@@ -47,7 +47,7 @@ curl -d "Hello" ntfy.sh/topic
 ```
 
 Deste modo, quem estiver inscrito no tópico "topic" irá receber a notificação, sem a necessidade de qualquer tipo de instalação de container. Porém é importante escolher o nome com sabedoria, pois é um serviço aberto.
-
+---
 ## :material-cloud-upload-outline: Exemplo Prático: Envio de Log de Backup (RClone)
 
 ```bash

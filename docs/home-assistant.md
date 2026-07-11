@@ -1,5 +1,4 @@
 # :material-home-assistant: Home Assistant
----
 ## MQTT
 ### :material-message-outline: Tópicos
 É possível adicionar tópicos no MQTT, por exemplo, para enviar alguma informação sobre um dispositivo (como a porcentagem da bateria). Porém, para que funcione, o serviço do MQTT precisa estar configurado para ouvir em uma porta específica - por padrão: `1883` - e no IP `0.0.0.0` (e não apenas `localhost` - `127.0.0.1`), pois a resposta vai ser enviada de volta para o dispositivo. Para tanto, o arquivo de configuração pode ser configurado desta maneira:

@@ -1,5 +1,4 @@
 # :material-microsoft-windows: Active Directory
-
 ## :material-folder-arrow-up-down: Pastas Compartilhadas
 Para configurar o compartilhamento de pastas no Active Directory, por meio das ferramentas RSAT, é necessário criar uma política de grupo. Depedendo de como a instalação do Active Directory foi feita, vale verificar se já não existem outras políticas pré-configuradas e também se não há nenhum erro ao aplicar uma política em uma determinada OU. Para fazer a listagem das políticas aplicadas, podemos usar o comando `gpresult /r` e para confirmar se não houve uma falha ao tentar aplicar uma política de grupo, usamos o comando `gpupdate /force` que deve retornar sucesso (é comum aparecer uma falha ou outra, mas a atualização precisa ser concluída com êxito). Caso ocorra algum problema para ler alguma política, uma opção que pode ajudar é criar uma nova OU e adicionar novas políticas para ela.
 
