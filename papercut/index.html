@@ -1,0 +1,1089 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Igor Ramos">
+      
+      
+        <link rel="canonical" href="https://docs.shaottech.com.br/papercut/">
+      
+      
+        <link rel="prev" href="../ntfy/">
+      
+      
+        <link rel="next" href="../wireguard/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Papercut - Tech Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#instalacao-do-cliente-de-impressao" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Tech Documentation" class="md-header__button md-logo" aria-label="Tech Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tech Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Papercut
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para o tema escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para o tema escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para o tema claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para o tema claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Tech Documentation" class="md-nav__button md-logo" aria-label="Tech Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tech Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unifi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniFi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas Operacionais
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sistemas Operacionais
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archlinux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arch Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../active-directory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Active Directory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../microsoft-365/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft 365
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google-workspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Google Workspace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ntfy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NTFY
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Papercut
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Papercut
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao-do-cliente-de-impressao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalação do Cliente de Impressão
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-chromebooks-baixe-e-abra-a-extensao-mobility-print-e-faca-login-para-liberar-a-opcao-de-imprimir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para Chromebooks, baixe e abra a extensão Mobility Print e faça login para liberar a opção de imprimir.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-de-rede" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup de Rede
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outro-aspecto-importante-que-vale-ressaltar-e-uma-particularidade-do-papercut-que-precisa-ser-considerada-na-hora-de-fazer-a-configuracao-de-rede-o-ip-configurado-inicialmente-e-mantido-em-todas-as-urls-geradas-pelo-servidor-entao-e-necessario-adicionar-redirecionamentos-apontando-para-o-ip-do-papercut-na-rede-local-de-cada-unidade-por-exemplo-se-o-papercut-foi-instalado-inicialmente-em-uma-vpn-configurada-na-faixa-de-ip-101014024-com-ip-1011122-precisa-haver-uma-regra-nat-que-troque-o-ip-do-papercut-para-o-ip-configurado-na-vpn-local-ex-1011112-1011122" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outro aspecto importante que vale ressaltar é uma particularidade do Papercut que precisa ser considerada na hora de fazer a configuração de rede. O IP configurado inicialmente é mantido em todas as URLs geradas pelo servidor, então é necessário adicionar redirecionamentos apontando para o IP do Papercut na rede local de cada unidade. Por exemplo, se o Papercut foi instalado inicialmente em uma VPN configurada na faixa de IP 10.10.14.0/24, com IP 10.11.12.2, precisa haver uma regra NAT que troque o IP do Papercut para o IP configurado na VPN local (ex.: 10.11.11.2 -&gt; 10.11.12.2).
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao-nas-impressoras-epson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalação nas Impressoras (Epson)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalação nas Impressoras (Epson)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passo-a-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passo a Passo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wireguard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wireguard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../home-assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Assistant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../samba-ad-dc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Samba AD DC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Troubleshooting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fix-error-303/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fix Error 303
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao-do-cliente-de-impressao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalação do Cliente de Impressão
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-chromebooks-baixe-e-abra-a-extensao-mobility-print-e-faca-login-para-liberar-a-opcao-de-imprimir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para Chromebooks, baixe e abra a extensão Mobility Print e faça login para liberar a opção de imprimir.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-de-rede" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup de Rede
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outro-aspecto-importante-que-vale-ressaltar-e-uma-particularidade-do-papercut-que-precisa-ser-considerada-na-hora-de-fazer-a-configuracao-de-rede-o-ip-configurado-inicialmente-e-mantido-em-todas-as-urls-geradas-pelo-servidor-entao-e-necessario-adicionar-redirecionamentos-apontando-para-o-ip-do-papercut-na-rede-local-de-cada-unidade-por-exemplo-se-o-papercut-foi-instalado-inicialmente-em-uma-vpn-configurada-na-faixa-de-ip-101014024-com-ip-1011122-precisa-haver-uma-regra-nat-que-troque-o-ip-do-papercut-para-o-ip-configurado-na-vpn-local-ex-1011112-1011122" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outro aspecto importante que vale ressaltar é uma particularidade do Papercut que precisa ser considerada na hora de fazer a configuração de rede. O IP configurado inicialmente é mantido em todas as URLs geradas pelo servidor, então é necessário adicionar redirecionamentos apontando para o IP do Papercut na rede local de cada unidade. Por exemplo, se o Papercut foi instalado inicialmente em uma VPN configurada na faixa de IP 10.10.14.0/24, com IP 10.11.12.2, precisa haver uma regra NAT que troque o IP do Papercut para o IP configurado na VPN local (ex.: 10.11.11.2 -&gt; 10.11.12.2).
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao-nas-impressoras-epson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalação nas Impressoras (Epson)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalação nas Impressoras (Epson)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passo-a-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passo a Passo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Papercut</h1>
+
+<h2 id="instalacao-do-cliente-de-impressao"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v210.7l-41.4-41.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 242.7zM64 320c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64h-46.9l-56.6 56.6c-31.2 31.2-81.9 31.2-113.1 0L110.9 320zm304 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48"/></svg></span> Instalação do Cliente de Impressão</h2>
+<p>Abra a URL de instalação (p. e.: <code>10.11.12.2:9163/setup</code>), faça o download e instale.</p>
+<p>A instalação varia de acordo com o tipo de integração, por exemplo, é possível usar as credenciais de acesso de uma conta Google.</p>
+<p>Após a instalação, você pode confirmar se a impressora foi configurada corretamente se ela estiver aparecendo na listagem de dispositivos.</p>
+<h2 id="para-chromebooks-baixe-e-abra-a-extensao-mobility-print-e-faca-login-para-liberar-a-opcao-de-imprimir">Para Chromebooks, baixe e abra a extensão <strong>Mobility Print</strong> e faça login para liberar a opção de imprimir.</h2>
+<h2 id="setup-de-rede"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4v2h1a1 1 0 0 1 1 1h7v2h-7a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1H2v-2h7a1 1 0 0 1 1-1h1v-2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg></span> Setup de Rede</h2>
+<p>Para setups em que o servidor do Papercut é compartilhado, precisamos ter faixas de rede distintas para que a conexão entre as unidades não conflite. Isso se aplica tanto para os clientes como para as impressoras, pois ambos precisam conversar com o software de impressão.</p>
+<h2 id="outro-aspecto-importante-que-vale-ressaltar-e-uma-particularidade-do-papercut-que-precisa-ser-considerada-na-hora-de-fazer-a-configuracao-de-rede-o-ip-configurado-inicialmente-e-mantido-em-todas-as-urls-geradas-pelo-servidor-entao-e-necessario-adicionar-redirecionamentos-apontando-para-o-ip-do-papercut-na-rede-local-de-cada-unidade-por-exemplo-se-o-papercut-foi-instalado-inicialmente-em-uma-vpn-configurada-na-faixa-de-ip-101014024-com-ip-1011122-precisa-haver-uma-regra-nat-que-troque-o-ip-do-papercut-para-o-ip-configurado-na-vpn-local-ex-1011112-1011122">Outro aspecto importante que vale ressaltar é uma particularidade do Papercut que precisa ser considerada na hora de fazer a configuração de rede. O IP configurado inicialmente é mantido em todas as URLs geradas pelo servidor, então é necessário adicionar redirecionamentos apontando para o IP do Papercut na rede local de cada unidade. Por exemplo, se o Papercut foi instalado inicialmente em uma VPN configurada na faixa de IP <code>10.10.14.0/24</code>, com IP <code>10.11.12.2</code>, precisa haver uma regra NAT que troque o IP do Papercut para o IP configurado na VPN local (ex.: <code>10.11.11.2</code> -&gt; <code>10.11.12.2</code>).</h2>
+<h2 id="instalacao-nas-impressoras-epson"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 64c0-35.3 28.7-64 64-64h213.5c17 0 33.3 6.7 45.3 18.7l42.5 42.5c12 12 18.7 28.3 18.7 45.3V144H64zM0 256c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v96c0 17.7-14.3 32-32 32h-32v64c0 35.3-28.7 64-64 64H128c-35.3 0-64-28.7-64-64v-64H32c-17.7 0-32-14.3-32-32zm128 160v32h256v-96H128zm328-144a24 24 0 1 0-48 0 24 24 0 1 0 48 0"/></svg></span> Instalação nas Impressoras (Epson)</h2>
+<div class="admonition tip">
+<p class="admonition-title">Dica</p>
+<p>Em caso de dúvida, é possível abrir a interface de uma impressora já configurada para conferir os detalhes e fazer comparações.</p>
+</div>
+<h3 id="passo-a-passo"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M296 192c-21.1-12.1-42.3-24.2-72-29.3V22.4C257.7 13 311.4 0 352 0c96 0 224 48 224 128s-119.6 96-176 96c-48 0-76-16-104-32M128 32h48v128h-48c-35.3 0-64-28.7-64-64s28.7-64 64-64m104 288c28-16 56-32 104-32 56.4 0 176 16 176 96S384 512 288 512c-40.5 0-94.3-13-128-22.4V349.3c29.7-5.2 50.9-17.3 72-29.4zM64 480c-35.3 0-64-28.7-64-64s28.7-64 64-64h48v128z"/></svg></span> Passo a Passo</h3>
+<ol>
+<li>
+<p>Acessar o site de registro da impressora e informar o número de série junto com as informações de região e o software utilizado (Papercut MF). Link: <a href="https://openplatform.epson.biz/license-op/inputInformation.html">Epson Open Platform</a></p>
+</li>
+<li>
+<p>Na impressora, entrar na seção "<em>Epson Open Platform</em>" e preencher o campo Chave do produto com a informação do site anterior e prosseguir.</p>
+</li>
+<li>
+<p>Após inserir a chave, ainda na mesma seção, abra a opção Sistema de Autenticação &gt; Básico e insira dois links (lembre-se de trocar o "<code>papercut-mf-IP</code>" pelo IP do Papercut): </p>
+<ul>
+<li>URL da página web antes do início de sessão:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://&lt;papercut-mf-IP&gt;:11260/epson-ops-papercut
+</code></pre></div>
+<ul>
+<li>URL de notificação:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>https://&lt;papercut-mf-IP&gt;:11260/epson-ops-papercut-notification-sfp-configure
+</code></pre></div>
+</li>
+<li>
+<p>Ainda na mesma área, ative a Gestão de quota e por fim, dê <em>OK</em>.</p>
+</li>
+<li>
+<p>Acesse a URL:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>https://&lt;papercut-mf-IP&gt;:11260/epson-ops-papercut
+</code></pre></div>
+</li>
+<li>
+<p>Verifique na interface web do Papercut, na área de <em>Devices</em>, se o dispositivo já apareceu na listagem, caso não, ative a impressora manualmente navegando na interface física (tocar na tela dela força uma atualização). Se ainda assim não houver comunicação, verifique se não existe algum bloqueio de <em>firewall</em>.</p>
+</li>
+<li>
+<p>Selecione a impressora na lista de dispositivos e marque "<em>Identity number</em>", "<em>Mask identity number</em>", "<em>Track &amp; control scanning</em>", "<em>Enable print release</em>", "<em>Enable Find-Me printing support</em>", dê um <em>check</em> na fila virtual (que concentra todas as outras) e por último na região onde tem os radio buttons, marque a fila da impressora que está sendo configurada. Se uma mensagem de alerta aparecer, certifique-se de que a fila virtual está agregando as outras (<em>Printers &gt; Printer List &gt; Fila Virtual &gt; Job Redirection Settings</em>).</p>
+</li>
+<li>
+<p>Ainda na mesma área de configuração da impressora, abra a seção de Configurações avançadas ("<em>Advanced Config</em>") e atualize o campo "<em>ext-device.epson.admin-password</em>" com a senha da interface web da impressora sendo configurada (geralmente é o número de série).</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

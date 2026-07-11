@@ -1,0 +1,1372 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Igor Ramos">
+      
+      
+        <link rel="canonical" href="https://docs.shaottech.com.br/linux/">
+      
+      
+        <link rel="prev" href="../unifi/">
+      
+      
+        <link rel="next" href="../archlinux/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Linux - Tech Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linux" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Tech Documentation" class="md-header__button md-logo" aria-label="Tech Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tech Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para o tema escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para o tema escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Mudar para o tema claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para o tema claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Tech Documentation" class="md-nav__button md-logo" aria-label="Tech Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tech Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unifi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UniFi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas Operacionais
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sistemas Operacionais
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#btrfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BTRFS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BTRFS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formatacao-e-raid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formatação e RAID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificacao-scrub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificação (Scrub)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLANs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outro-ponto-de-atencao-na-hora-dos-testes-e-que-a-vlan-e-uma-interface-virtual-e-e-adicionada-em-cima-da-interface-fisica-logo-se-existe-uma-outra-conexao-ativa-a-interface-fisica-possuira-dois-ips-atrelados-a-ela-isso-pode-ser-alterado-se-a-outra-conexao-for-desativada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outro ponto de atenção na hora dos testes é que a VLAN é uma interface virtual e é adicionada em cima da interface física, logo, se existe uma outra conexão ativa, a interface física possuirá dois IPs atrelados a ela. Isso pode ser alterado se a outra conexão for desativada.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixacao-de-ips-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixação de IPs - Debian
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemctl-enable-systemd-networkd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        systemctl enable systemd-networkd
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PDFs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PDFs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-juntar-dois-ou-mais-arquivos-em-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como juntar dois ou mais arquivos em PDF?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-comprimir-arquivos-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como comprimir arquivos PDF?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gs-sdevicepdfwrite-dcompatibilitylevel14-dpdfsettingsprepress-dnopause-dquiet-dbatch-soutputfilearquivo-comprimidopdf-arquivo-originalpdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile=arquivo-comprimido.pdf arquivo-original.pdf
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#particionamento-raid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Particionamento (RAID)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Particionamento (RAID)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passos-detalhados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos detalhados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archlinux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arch Linux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../windows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../active-directory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Active Directory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../microsoft-365/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Microsoft 365
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google-workspace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Google Workspace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ntfy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NTFY
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../papercut/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Papercut
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wireguard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wireguard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recursos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../home-assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home Assistant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../samba-ad-dc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Samba AD DC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Troubleshooting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fix-error-303/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fix Error 303
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#btrfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BTRFS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BTRFS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formatacao-e-raid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formatação e RAID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verificacao-scrub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verificação (Scrub)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLANs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outro-ponto-de-atencao-na-hora-dos-testes-e-que-a-vlan-e-uma-interface-virtual-e-e-adicionada-em-cima-da-interface-fisica-logo-se-existe-uma-outra-conexao-ativa-a-interface-fisica-possuira-dois-ips-atrelados-a-ela-isso-pode-ser-alterado-se-a-outra-conexao-for-desativada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outro ponto de atenção na hora dos testes é que a VLAN é uma interface virtual e é adicionada em cima da interface física, logo, se existe uma outra conexão ativa, a interface física possuirá dois IPs atrelados a ela. Isso pode ser alterado se a outra conexão for desativada.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixacao-de-ips-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixação de IPs - Debian
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systemctl-enable-systemd-networkd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        systemctl enable systemd-networkd
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PDFs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PDFs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-juntar-dois-ou-mais-arquivos-em-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como juntar dois ou mais arquivos em PDF?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-comprimir-arquivos-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como comprimir arquivos PDF?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gs-sdevicepdfwrite-dcompatibilitylevel14-dpdfsettingsprepress-dnopause-dquiet-dbatch-soutputfilearquivo-comprimidopdf-arquivo-originalpdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile=arquivo-comprimido.pdf arquivo-original.pdf
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#particionamento-raid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Particionamento (RAID)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Particionamento (RAID)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passos-detalhados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos detalhados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="linux"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M220.9 123.3c1 .5 1.8 1.7 3 1.7 1.1 0 2.8-.4 2.9-1.5.2-1.4-1.9-2.3-3.2-2.9-1.7-.7-3.9-1-5.5-.1-.4.2-.8.7-.6 1.1.3 1.3 2.3 1.1 3.4 1.7M199 125c1.2 0 2-1.2 3-1.7 1.1-.6 3.1-.4 3.5-1.6.2-.4-.2-.9-.6-1.1-1.6-.9-3.8-.6-5.5.1-1.3.6-3.4 1.5-3.2 2.9.1 1 1.8 1.5 2.8 1.4m221 278.8c-3.6-4-5.3-11.6-7.2-19.7-1.8-8.1-3.9-16.8-10.5-22.4-1.3-1.1-2.6-2.1-4-2.9-1.3-.8-2.7-1.5-4.1-2 9.2-27.3 5.6-54.5-3.7-79.1-11.4-30.1-31.3-56.4-46.5-74.4-17.1-21.5-33.7-41.9-33.4-72C311.1 85.4 315.7.1 234.8 0 132.4-.2 158 103.4 156.9 135.2c-1.7 23.4-6.4 41.8-22.5 64.7-18.9 22.5-45.5 58.8-58.1 96.7-6 17.9-8.8 36.1-6.2 53.3-6.5 5.8-11.4 14.7-16.6 20.2-4.2 4.3-10.3 5.9-17 8.3s-14 6-18.5 14.5c-2.1 3.9-2.8 8.1-2.8 12.4 0 3.9.6 7.9 1.2 11.8 1.2 8.1 2.5 15.7.8 20.8-5.2 14.4-5.9 24.4-2.2 31.7 3.8 7.3 11.4 10.5 20.1 12.3 17.3 3.6 40.8 2.7 59.3 12.5 19.8 10.4 39.9 14.1 55.9 10.4 11.6-2.6 21.1-9.6 25.9-20.2 12.5-.1 26.3-5.4 48.3-6.6 14.9-1.2 33.6 5.3 55.1 4.1.6 2.3 1.4 4.6 2.5 6.7v.1c8.3 16.7 23.8 24.3 40.3 23 16.6-1.3 34.1-11 48.3-27.9 13.6-16.4 36-23.2 50.9-32.2 7.4-4.5 13.4-10.1 13.9-18.3.4-8.2-4.4-17.3-15.5-29.7M223.8 87.3c9.8-22.2 34.2-21.8 44-.4 6.5 14.2 3.6 30.9-4.3 40.4-1.6-.8-5.9-2.6-12.6-4.9 1.1-1.2 3.1-2.7 3.9-4.6 4.8-11.8-.2-27-9.1-27.3-7.3-.5-13.9 10.8-11.8 23-4.1-2-9.4-3.5-13-4.4-1-6.9-.3-14.6 2.9-21.8m-40.7-11.5c10.1 0 20.8 14.2 19.1 33.5-3.5 1-7.1 2.5-10.2 4.6 1.2-8.9-3.3-20.1-9.6-19.6-8.4.7-9.8 21.2-1.8 28.1 1 .8 1.9-.2-5.9 5.5-15.6-14.6-10.5-52.1 8.4-52.1m-13.6 60.7c6.2-4.6 13.6-10 14.1-10.5 4.7-4.4 13.5-14.2 27.9-14.2 7.1 0 15.6 2.3 25.9 8.9 6.3 4.1 11.3 4.4 22.6 9.3 8.4 3.5 13.7 9.7 10.5 18.2-2.6 7.1-11 14.4-22.7 18.1-11.1 3.6-19.8 16-38.2 14.9-3.9-.2-7-1-9.6-2.1-8-3.5-12.2-10.4-20-15-8.6-4.8-13.2-10.4-14.7-15.3q-2.1-7.35 4.2-12.3m3.3 334c-2.7 35.1-43.9 34.4-75.3 18-29.9-15.8-68.6-6.5-76.5-21.9-2.4-4.7-2.4-12.7 2.6-26.4v-.2c2.4-7.6.6-16-.6-23.9-1.2-7.8-1.8-15 .9-20 3.5-6.7 8.5-9.1 14.8-11.3 10.3-3.7 11.8-3.4 19.6-9.9 5.5-5.7 9.5-12.9 14.3-18 5.1-5.5 10-8.1 17.7-6.9 8.1 1.2 15.1 6.8 21.9 16l19.6 35.6c9.5 19.9 43.1 48.4 41 68.9m-1.4-25.9c-4.1-6.6-9.6-13.6-14.4-19.6 7.1 0 14.2-2.2 16.7-8.9 2.3-6.2 0-14.9-7.4-24.9-13.5-18.2-38.3-32.5-38.3-32.5-13.5-8.4-21.1-18.7-24.6-29.9s-3-23.3-.3-35.2c5.2-22.9 18.6-45.2 27.2-59.2 2.3-1.7.8 3.2-8.7 20.8-8.5 16.1-24.4 53.3-2.6 82.4.6-20.7 5.5-41.8 13.8-61.5 12-27.4 37.3-74.9 39.3-112.7 1.1.8 4.6 3.2 6.2 4.1 4.6 2.7 8.1 6.7 12.6 10.3 12.4 10 28.5 9.2 42.4 1.2 6.2-3.5 11.2-7.5 15.9-9 9.9-3.1 17.8-8.6 22.3-15 7.7 30.4 25.7 74.3 37.2 95.7 6.1 11.4 18.3 35.5 23.6 64.6 3.3-.1 7 .4 10.9 1.4 13.8-35.7-11.7-74.2-23.3-84.9-4.7-4.6-4.9-6.6-2.6-6.5 12.6 11.2 29.2 33.7 35.2 59 2.8 11.6 3.3 23.7.4 35.7 16.4 6.8 35.9 17.9 30.7 34.8-2.2-.1-3.2 0-4.2 0 3.2-10.1-3.9-17.6-22.8-26.1-19.6-8.6-36-8.6-38.3 12.5-12.1 4.2-18.3 14.7-21.4 27.3-2.8 11.2-3.6 24.7-4.4 39.9-.5 7.7-3.6 18-6.8 29-32.1 22.9-76.7 32.9-114.3 7.2m257.4-11.5c-.9 16.8-41.2 19.9-63.2 46.5-13.2 15.7-29.4 24.4-43.6 25.5s-26.5-4.8-33.7-19.3c-4.7-11.1-2.4-23.1 1.1-36.3 3.7-14.2 9.2-28.8 9.9-40.6.8-15.2 1.7-28.5 4.2-38.7 2.6-10.3 6.6-17.2 13.7-21.1.3-.2.7-.3 1-.5.8 13.2 7.3 26.6 18.8 29.5 12.6 3.3 30.7-7.5 38.4-16.3 9-.3 15.7-.9 22.6 5.1 9.9 8.5 7.1 30.3 17.1 41.6 10.6 11.6 14 19.5 13.7 24.6M173.4 148.7c2 1.9 4.7 4.5 8 7.1 6.6 5.2 15.8 10.6 27.3 10.6 11.6 0 22.5-5.9 31.8-10.8 4.9-2.6 10.9-7 14.8-10.4s5.9-6.3 3.1-6.6-2.6 2.6-6 5.1c-4.4 3.2-9.7 7.4-13.9 9.8-7.4 4.2-19.5 10.2-29.9 10.2s-18.7-4.8-24.9-9.7c-3.1-2.5-5.7-5-7.7-6.9-1.5-1.4-1.9-4.6-4.3-4.9-1.4-.1-1.8 3.7 1.7 6.5"/></svg></span> Linux</h1>
+<h2 id="btrfs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v164.1C18.1 247.4 40.2 240 64 240h320c23.8 0 45.9 7.4 64 20.1V96c0-35.3-28.7-64-64-64zm384 320c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64zm-224 32a32 32 0 1 1 64 0 32 32 0 1 1-64 0m128-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64"/></svg></span> BTRFS</h2>
+<p>O BTRFS é um sistema de arquivos poderoso que possui diversas funções interessantes para armazenamento de dados. Em servidores de arquivos, queremos pelo menos ter duas unidades de armazenamento sendo usadas para guardar nossas informações, com o objetivo de ter maior redundância em caso de falha.</p>
+<h3 id="formatacao-e-raid"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7v2h5V7zM2 9v6h5V9zm10 0v2H9v2h3v2l3-3zm5 2v2h5v-2zm0 4v2h5v-2z"/></svg></span> Formatação e RAID</h3>
+<p>Para formatar um disco em BTRFS, podemos executar o comando:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkfs.btrfs<span class="w">  </span>--compress<span class="w"> </span>zstd:3<span class="w"> </span>-L<span class="w"> </span>pool<span class="w"> </span>/dev/sda
+</code></pre></div>
+<p>Lembrando de trocar, caso necessário,  o dispositivo /dev/sda pelo  que será formatado</p>
+<p>Depois, criamos uma pool no dispositivo</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkfs.btrfs<span class="w"> </span>-L<span class="w"> </span>pool<span class="w"> </span>/dev/sda
+</code></pre></div>
+<p>Após esses passo, montamos o disco em algum local, por exemplo:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mount<span class="w"> </span>/dev/sda<span class="w"> </span>-o<span class="w"> </span><span class="nv">compress</span><span class="o">=</span>zstd:3<span class="w"> </span>/mnt
+</code></pre></div>
+Em seguida, criamos um novo subvolume que funciona como uma partição:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>/mnt
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>btrfs<span class="w"> </span>subv<span class="w"> </span>create<span class="w"> </span>./data
+</code></pre></div>
+<p>Para que esse volume seja montado automaticamente, precisamos adicioná-lo ao arquivo fstab, e também criar a pasta que vai comportá-lo:</p>
+<div class="highlight"><span class="filename">/etc/fstab</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nv">LABEL</span><span class="o">=</span>pool<span class="w">      </span>/data<span class="w">   </span>btrfs<span class="w">   </span>defaults,compress<span class="o">=</span>zstd:3,subvol<span class="o">=</span>data<span class="w">    </span><span class="m">0</span><span class="w">       </span><span class="m">0</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mkdir<span class="w"> </span>/data
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>systemctl<span class="w"> </span>daemon-reload
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>mount<span class="w"> </span>-a
+</code></pre></div>
+<p>Agora, quando o sistema for reiniciado, automaticamente montará o subvolume recém-criado "<code>data</code>".</p>
+<p>Uma vez que temos as configurações do BTRFS completas, podemos adicionar um novo dispositivo de armazenamento, a fim de aumentar a segurança dos dados: </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>btrfs<span class="w"> </span>device<span class="w"> </span>add<span class="w"> </span>/dev/sdb<span class="w"> </span>/data
+</code></pre></div>
+<p><code>/dev/sdb</code>, se houver necessidade, pode ser trocado pelo dispositivo a ser usado.</p>
+<p>E então, iniciamos o processo de construção do RAID 1 com a nova unidade de armazenamento:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>btrfs<span class="w"> </span>balance<span class="w"> </span>start<span class="w"> </span>-dconvert<span class="o">=</span>raid1,soft<span class="w"> </span>-mconvert<span class="o">=</span>raid1,soft<span class="w"> </span>--bg<span class="w"> </span>/data
+</code></pre></div>
+O comando será executado em background, mas você pode acompanhar o andamento digitando:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>watch<span class="w"> </span>-n1<span class="w"> </span>btrfs<span class="w"> </span>-v<span class="w"> </span>balance<span class="w"> </span>status<span class="w"> </span>/data
+</code></pre></div>
+<h3 id="verificacao-scrub"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h7c-.41-.25-.8-.56-1.14-.9a6.48 6.48 0 0 1-.36-9.18C13.69 9.5 17.33 9.13 20 11V8zm-1 7V3.5L18.5 9zm7.31 9.9c1.33-2.11.69-4.9-1.4-6.22-2.11-1.33-4.91-.68-6.22 1.4-1.34 2.11-.69 4.89 1.4 6.22 1.46.93 3.32.93 4.79.02L22 23.39 23.39 22zm-3.81.1a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5"/></svg></span> Verificação (Scrub)</h3>
+<p>Alguns comandos úteis para verificar a integridade do sistema de arquivos BTRFS são:</p>
+<p>Verificação em busca erros (/dev/sda pode ser substituído pelo volume):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>btrfs<span class="w"> </span>scrub<span class="w"> </span>start<span class="w"> </span>-Bd<span class="w"> </span>/dev/sda
+</code></pre></div>
+<p>Checagem do status da última verificação (pode ser executado em paralelo ao comando anterior):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>btrfs<span class="w"> </span>scrub<span class="w"> </span>status<span class="w"> </span>/dev/sda
+</code></pre></div>
+<p>Busca de logs:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>journalctl<span class="w"> </span>--output<span class="o">=</span>cat<span class="w"> </span>--grep<span class="o">=</span><span class="s1">&#39;BTRFS.* i/o error&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Dica</p>
+<p>Para conferir os detalhes dos arquivos corrompidos (se houverem) o comando <code>dmesg</code> pode ser usado.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>As informações obtidas dependem da execução do scrub, é através dessa operação que o sistema de arquivos é analisado.</p>
+</div>
+<hr />
+<h2 id="vlans"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="m401.2 39.1 148.2 150.3c27.7 28.1 27.7 73.1 0 101.2L393 448.9c-9.3 9.4-24.5 9.5-33.9.2s-9.5-24.5-.2-33.9l156.4-158.4c9.2-9.3 9.2-24.4 0-33.7L367 72.9c-9.3-9.4-9.2-24.6.2-33.9s24.6-9.2 33.9.2zM32.1 229.5V96c0-35.3 28.7-64 64-64h133.5c17 0 33.3 6.7 45.3 18.7l144 144c25 25 25 65.5 0 90.5L285.4 418.7c-25 25-65.5 25-90.5 0l-144-144c-12-12-18.7-28.3-18.7-45.3zm144-85.5a32 32 0 1 0-64 0 32 32 0 1 0 64 0"/></svg></span> VLANs</h2>
+<p>Para mais detalhes sobre VLANs, você pode conferir a página de <a href="../redes/#VLANs">Redes</a>.</p>
+<p>Para fazer o teste de VLANs no Linux, com o NetworkManager, existem alguns comandos úteis:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>add<span class="w"> </span><span class="nb">type</span><span class="w"> </span>vlan<span class="w"> </span>con-name<span class="w"> </span>vlan20-test<span class="w"> </span>dev<span class="w"> </span>enp2s0<span class="w"> </span>id<span class="w"> </span><span class="m">20</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>up<span class="w"> </span>vlan20-test
+</code></pre></div>
+<p>Os comandos acima criam uma VLAN chamada vlan20-test em cima da interface "enp2s0" e ativam a conexão. Essa VLAN é criada com a tag 20.</p>
+<p>Para deletar essa nova VLAN, basta executar:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>delete<span class="w"> </span>vlan20-test
+</code></pre></div>
+<p>Vale destacar que geralmente também é possível fazer isso pela interface gráfica do sistema.</p>
+<h2 id="outro-ponto-de-atencao-na-hora-dos-testes-e-que-a-vlan-e-uma-interface-virtual-e-e-adicionada-em-cima-da-interface-fisica-logo-se-existe-uma-outra-conexao-ativa-a-interface-fisica-possuira-dois-ips-atrelados-a-ela-isso-pode-ser-alterado-se-a-outra-conexao-for-desativada">Outro ponto de atenção na hora dos testes é que a VLAN é uma interface virtual e é adicionada em cima da interface física, logo, se existe uma outra conexão ativa, a interface física possuirá dois IPs atrelados a ela. Isso pode ser alterado se a outra conexão for desativada.</h2>
+<h2 id="fixacao-de-ips-debian"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 9h-2V7h2zm7 11v2h-7a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1H2v-2h7a1 1 0 0 1 1-1h1v-2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4v2h1a1 1 0 0 1 1 1zM9 5H7v10h2zm2 10h2v-4h2a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4z"/></svg></span> Fixação de IPs - Debian</h2>
+<p>Existem diferentes formas de fixar o endereço de IP no Debian. Uma delas se dá utilizando o systemd-networkd:</p>
+<p>Crie o arquivo de configuração e adicione o seguinte conteúdo:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>nano<span class="w"> </span>/etc/systemd/network/10-static.network
+</code></pre></div>
+<div class="highlight"><span class="filename">10-static.network</span><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="o">[</span>Match<span class="o">]</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="nv">Name</span><span class="o">=</span>eth0
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="o">[</span>Network<span class="o">]</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="nv">Address</span><span class="o">=</span><span class="m">192</span>.168.0.2/24
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="nv">Gateway</span><span class="o">=</span><span class="m">192</span>.168.0.1
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="nv">DNS</span><span class="o">=</span><span class="m">8</span>.8.4.4<span class="w"> </span><span class="m">1</span>.1.1.1
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Observação</p>
+<p>altere o endereço de IP da interface e do gateway conforme sua rede e não se esqueça de alterar a interface caso necessário (<code>eth0</code>)</p>
+</div>
+<p>Depois, remova a configuração de DHCP padrão (caso o IP não esteja fixado no servidor DHCP) comentando a linha que ativa a atribuição automática:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>nano<span class="w"> </span>/etc/network/interfaces
+</code></pre></div>
+<div class="highlight"><span class="filename">interfaces</span><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1">#iface eth0 inet dhcp # conteúdo do arquivo</span>
+</code></pre></div></p>
+<p>Obs.: <code>eth0</code> - é o nome da interface que pode ser diferente dependendo da máquina</p>
+<p>Reinicie o serviço:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>systemctl<span class="w"> </span>restart<span class="w"> </span>systemd-networkd
+</code></pre></div>
+Por fim, certifique-se de que o serviço está habilitado:</p>
+<h2 id="systemctl-enable-systemd-networkd"><div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>systemd-networkd
+</code></pre></div></h2>
+<h2 id="pdfs"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M96 0C60.7 0 32 28.7 32 64v384c0 35.3 28.7 64 64 64h80V400c0-35.3 28.7-64 64-64h176V170.5c0-17-6.7-33.3-18.7-45.3L290.7 18.7C278.7 6.7 262.5 0 245.5 0zm261.5 176H264c-13.3 0-24-10.7-24-24V58.5zM240 380c-11 0-20 9-20 20v128c0 11 9 20 20 20s20-9 20-20v-28h12c33.1 0 60-26.9 60-60s-26.9-60-60-60zm32 80h-12v-40h12c11 0 20 9 20 20s-9 20-20 20m96-80c-11 0-20 9-20 20v128c0 11 9 20 20 20h32c28.7 0 52-23.3 52-52v-64c0-28.7-23.3-52-52-52zm20 128v-88h12c6.6 0 12 5.4 12 12v64c0 6.6-5.4 12-12 12zm88-108v128c0 11 9 20 20 20s20-9 20-20v-44h28c11 0 20-9 20-20s-9-20-20-20h-28v-24h28c11 0 20-9 20-20s-9-20-20-20h-48c-11 0-20 9-20 20"/></svg></span> PDFs</h2>
+<h3 id="como-juntar-dois-ou-mais-arquivos-em-pdf">Como juntar dois ou mais arquivos em PDF?</h3>
+<p>O utilitário <strong>pdfunite</strong> pode ser usado para a junção de arquivos em PDF. Geralmente ele já vem instalado no Linux.</p>
+<p>Exemplo de uso para junção de todos os arquivos do diretório atual em um único "<code>arquivo-mesclado.pdf</code>":</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>pdfunite<span class="w"> </span>*.pdf<span class="w"> </span>arquivo-mesclado.pdf
+</code></pre></div>
+<h3 id="como-comprimir-arquivos-pdf">Como comprimir arquivos PDF?</h3>
+<p>Alguns arquivos no formato PDF podem ser extremamente pesados, o que dificulta o processo de impressão, portanto o comando <code>gs</code> (também é comum de vir instalado no Linux) pode ser usado para fazer uma compressão do arquivo, por exemplo:</p>
+<h2 id="gs-sdevicepdfwrite-dcompatibilitylevel14-dpdfsettingsprepress-dnopause-dquiet-dbatch-soutputfilearquivo-comprimidopdf-arquivo-originalpdf"><div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>gs<span class="w"> </span>-sDEVICE<span class="o">=</span>pdfwrite<span class="w"> </span>-dCompatibilityLevel<span class="o">=</span><span class="m">1</span>.4<span class="w"> </span>-dPDFSETTINGS<span class="o">=</span>/prepress<span class="w"> </span>-dNOPAUSE<span class="w"> </span>-dQUIET<span class="w"> </span>-dBATCH<span class="w"> </span>-sOutputFile<span class="o">=</span>arquivo-comprimido.pdf<span class="w"> </span>arquivo-original.pdf
+</code></pre></div></h2>
+<h2 id="particionamento-raid"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M192 0c-35.3 0-64 28.7-64 64v256c0 35.3 28.7 64 64 64h192c35.3 0 64-28.7 64-64V119.4c0-17.4-7.1-34.1-19.7-46.2l-57.7-55.4A64.1 64.1 0 0 0 326.3 0zM64 128c-35.3 0-64 28.7-64 64v256c0 35.3 28.7 64 64 64h192c35.3 0 64-28.7 64-64v-16h-64v16H64V192h16v-64z"/></svg></span> Particionamento (RAID)</h2>
+<p>O Particionamento via RAID é interessante para aumentar a confiabilidade do sistema em caso de falha nos dispositivos de armazenamento. Existem diferentes formas de configurar o RAID, a mais simples é via md.</p>
+<p>Para fazer a configuração usando o md é possível usar a interface ou a linha de comando. O objetivo é juntar os discos e, no cenário mais comum de dois HDs/SSDs, ativar um RAID 1 entre eles. Após a configuração em RAID, usamos o LVM para criar partições adicionais no espaço disponível das unidades de armazenamento. Por fim, seguimos com a    instalação em cima do LVM que está sobre o RAID.</p>
+<p>Tanto para UEFI quanto para BIOS Legacy, é importante lembrar de criar partições de inicialização para instalação do Grub. A diferença geralmente é só o tamanho da partição e a forma como ela é instalada. No caso de UEFI, deixamos um 1 GB, já para BIOS Legacy, bastam alguns megas.</p>
+<p>É interessante destacar também que no momento de particionamento, devemos evitar a configuração de duas partições do tipo UEFI, pois isso pode causar problema na instalação do Grub (como tem duas partições que podem ser usadas é confuso). Além disso, as partições UEFI não devem fazer parte do RAID.</p>
+<p>Por fim, podemos copiar a partição EFI de um dos discos para o outro.</p>
+<p>Link útil: https://youtu.be/ykzR3i-pToY?si=CAdgDheA8SQuNLev</p>
+<p>No vídeo, a configuração é feita no formato de BIOS Legacy, porém esse procedimento pode ser adaptado para UEFI, simplesmente precisaríamos mudar o tipo de partição para EFI e aumentar o tamanho para 1 GB (+1G). Importante notar que não usaríamos o comando dpkg-reconfigure e sim, faríamos a cópia da partição /boot/efi para a mesma partição EFI do outro HD/SSD. Os passos detalhados para isso seriam:</p>
+<h3 id="passos-detalhados"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z"/></svg></span> Passos detalhados</h3>
+<ol>
+<li>
+<p>Monte ambas as partições EFI:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/mnt/efi-sda
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/mnt/efi-sdb
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>sudo<span class="w"> </span>mount<span class="w"> </span>/dev/sda1<span class="w"> </span>/mnt/efi-sda
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>sudo<span class="w"> </span>mount<span class="w"> </span>/dev/sdb1<span class="w"> </span>/mnt/efi-sdb
+</code></pre></div>
+</li>
+<li>
+<p>Copie o conteúdo da partição EFI principal para a secundária:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>sudo<span class="w"> </span>cp<span class="w"> </span>-r<span class="w"> </span>/mnt/efi-sda/*<span class="w"> </span>/mnt/efi-sdb/
+</code></pre></div>
+<p>Isso copiará as pastas como EFI/debian, EFI/BOOT, etc., para que o segundo disco também tenha um ambiente de boot funcional.</p>
+</li>
+<li>
+<p>Instale o GRUB apontando para o segundo disco:
+Agora que /dev/sdb1 tem o conteúdo correto, diga ao GRUB para instalar o bootloader EFI nele:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>sudo<span class="w"> </span>grub-install<span class="w"> </span>--target<span class="o">=</span>x86_64-efi<span class="w"> </span>--efi-directory<span class="o">=</span>/mnt/efi-sdb<span class="w"> </span>--bootloader-id<span class="o">=</span>debian<span class="w"> </span>--recheck<span class="w"> </span>--no-nvram<span class="w"> </span>/dev/sdb
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Importante</p>
+<p>O <code>--no-nvram</code> evita sobrescrever a ordem de boot no firmware, e o <code>--bootloader-id</code> pode ser mantido como Debian se quiser que o nome apareça igual na BIOS/UEFI.</p>
+</div>
+</li>
+<li>
+<p>Atualize o GRUB</p>
+<p>Mesmo que os arquivos já estejam sincronizados, é bom garantir que tudo esteja em ordem: <code>sudo update-grub</code></p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
