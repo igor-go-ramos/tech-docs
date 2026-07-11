@@ -2,7 +2,7 @@
 ## :fontawesome-solid-cubes: Pacotes Úteis:
 
 ```bash
-nano tmux pacman-contrib go git zsh base-devel man-pages tldr htop zip gzip atool ttf-jetbrains-mono
+nano tmux pacman-contrib go git zsh base-devel man-pages tldr htop zip gzip atool ttf-jetbrains-mono kdeconnect xdg-desktop-portal
 ```
 
 ## :material-cog: Configurações
